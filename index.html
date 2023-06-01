@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>WHAT YOU KNOW ABOUT THE KRUMP</title>
+	<link rel='icon' type='image.png' 
+	sizes='16x16' href="image/image.png">
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR:wght@400;600&display=swap" rel="stylesheet">
+	<style type="text/css">
+		html{font-size: 16px; scroll-behavior: smooth;}
+
+		body,h1,h2{margin: 0;}
+
+		footer{height: 200px; background: black; text-align: center;}
+
+		.nav{background: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0)); width: 100vw; height: 40px; position: fixed; z-index: 3;}
+
+		ul{list-style-type: none; display: flex; justify-content: space-around; }
+
+		a{display: block; padding:0;
+			 text-decoration: none;
+			 font-family: 'Bebas Neue', sans-serif;
+			 color: white; font-size: 1.5rem;}
+		a:hover{color: #ffdd00;}
+
+		.menu{width: 640px; height: 2rem; position: fixed; top: 0; padding: 0; margin: 4px; z-index: 22}
+		.wrapper
+		{width: 100%; margin: auto; padding: 0px;}
+
+		.overlay{background: black; position: absolute;
+			opacity: 0; width: 400px; height: 300px;
+			text-align: center; z-index: 20;
+			}
+		.overlay:hover{opacity: 0.8; transition-duration: 0.6s;}
+		.overlay p {position: relative; top: 100px;}
+
+		.bgimg01{background-image: url(image/bg01.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-attachment: fixed;}
+		.bgimg{background-image: url(image/bg.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-attachment: fixed;}
+
+		.flex01
+		{display: flex; justify-content: space-around;}
+		.flex02
+		{display: flex; justify-content: flex-start;}
+		.flex03
+		{display: flex; justify-content: flex-end;}
+		.flex04
+		{display: flex; justify-content: space-between;}
+		.flex05
+		{display: flex; flex-wrap: wrap;}
+		.flex06
+		{display: flex; justify-content: center;}
+
+		section{background: black;}
+
+		video{width: 100%; height: 840px; object-fit: cover; overflow: hidden; margin: 0px auto; position: relative;}
+		.title{height: 840px;}
+		.videotext{position: absolute; color: white; top: 50%; right:16%; margin-top: -50px; text-align: right;}
+
+		h1{font-size: 8rem;}
+
+		.videotext p {font-size: 6rem; font-family: 'Bebas Neue', sans-serif; line-height: 6rem; margin:0;}
+
+		.introbg{width: 60%; height: auto; position: absolute; top: 86rem; left: 22rem;}
+
+		.introvideo{width: 480px; height: 270px; margin: 0;}
+
+		.wrap{width: 1200px; margin: auto; padding: 200px 0px; letter-spacing: -0.2rem; word-break: keep-all;}
+
+		.initial{color: white; font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.3rem; line-height: 8rem; margin-right: 100px;}
+		h2{font-size: 2rem; color: #ffdd00;}
+		.titlekr{font-family: 'Noto Sans KR', sans-serif; font-weight: 600;}
+		.titleeng{font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.1rem; margin-top: 20px; margin-bottom: 5px;}
+		.storytell{color: white; font-family: 'Bebas Neue', sans-serif;
+			font-size: 5rem; letter-spacing: 0.1rem; text-shadow: 0px 2px 6px black;}
+
+		div.buildup{background:rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); border: solid 1px white;border-radius: 40px;}
+
+		div.graph{width: 1000px; margin-left: 100px;  position: relative; top:20px; background-image: url(image/graph.png); background-size: 80%; background-repeat: no-repeat;
+			background-position: center;}
+
+	.buildup:after{content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		width: 0;
+		height: 0;
+		border: 36px solid transparent;
+		border-top-color: rgba(255, 255, 255, 0.2);
+		border-bottom: 0;
+		border-left: 0;
+		margin-left: -18px;
+		margin-bottom: -36px;
+	}
+
+	.crowdtext{
+		width: 600px; background-color: rgba(255, 255, 255, 0.2);
+		backdrop-filter: blur(10px); padding:20px 0px;
+		border-radius: 40px; position: relative; top: -100px;
+		border: 1px solid white; text-align: center;
+	}
+
+	p{font-size: 1rem; color: white; letter-spacing: -1px; line-height: 2rem; font-family: 'Noto Sans KR', sans-serif; font-weight: 400;}
+	.emph{color: #ffdd00;}
+
+	.verticalline{width: 1px; height: 250px; background: #ffdd00; display: block; margin-right: auto; margin-left: auto;}
+
+	.ogdiv{width: 400px; height: 300px;}
+
+	.ogname{font-size:3rem; position:relative; top: 230px; left: 20px; text-shadow: 0px 0px 5px black; margin: 0;}
+
+	#howtobg{background: url(image/howto01.png);
+		background-repeat: no-repeat;
+		background-position: right;}
+
+	.circle{border: 1px solid #ffdd00;
+			width: 160px; height: 160px; border-radius: 50%;
+			text-align: center; margin-right: 20px;}
+
+	.movement{background: url(image/howto02.png);
+		background-position: center;
+		background-repeat: no-repeat;}
+
+.leftreveal{opacity: 0; position: relative;
+	animation: rightreveal 1s forwards;
+	animation-delay: 0.1s;}
+.rightreveal{opacity: 0; position: relative;
+	animation: leftreveal 1s forwards;
+	animation-delay: 0.1s;}
+.topreveal{opacity: 0; position: relative;
+	animation: topreveal 1s forwards;
+	animation-delay: 0.1s;}
+
+.fadein01{opacity: 0;
+	animation: fadein 1s forwards;
+	animation-delay: 0.1s;}
+.fadein02{opacity: 0;
+	animation: fadein 1s forwards;
+	animation-delay: 0.2s;}
+.fadein03{opacity: 0;
+	animation: fadein 1s forwards;
+	animation-delay: 0.3s;}
+.bounce{
+	animation: bounce 0.5s;
+	animation-direction: alternate;
+	animation-timing-function: cubic-bezier(.5, 0.05, .8, .5);
+	animation-iteration-count: infinite;
+}
+
+@keyframes rightreveal{
+			from{right: 50px; opacity: 0;}
+			to{right: 0px; opacity: 1;}
+}
+@keyframes leftreveal{
+			from{left: 50px; opacity: 0;}
+			to{left: 0px; opacity: 1;}
+}
+@keyframes topreveal{
+			from{top: 100px; opacity: 0;}
+			to{top: -60px; opacity: 1;}
+}
+
+@keyframes fadein{
+			from{opacity: 0;}
+			to{opacity: 1}
+}
+
+@keyframes bounce{
+			from{transform: translate3d(0px, 0px, 0px);}
+			to{transform: translate3d(0px, 40px, 0px);}
+}
+
+#button
+{
+	width: 160px; font-size:2rem;
+	text-align: center; padding: 10px;
+  background:rgba(255, 255, 255, 0.2);
+  border-radius:20px;
+  text-decoration:none; border: solid 1px white;
+  backdrop-filter: blur(6px);
+}
+
+
+#button:hover
+{background:rgba(255, 255, 255, 0.6);
+transition: 0.2s linear;}
+
+#popup01
+{
+display: none;
+  position:fixed;
+  top:25vh;
+  left: 30vw;
+  z-index: 5;
+  width:600px;
+  background:rgba(60, 60, 60, 0.6);
+  backdrop-filter: blur(10px);
+  color:black;
+  padding:20px;
+  border: solid 1px white;
+  border-radius: 30px;
+  -webkit-transition:all 1s;
+}
+
+#popup01:target
+{display: block;}
+
+#popup02
+{
+	display: none;
+  position:fixed;
+  top:25vh;
+  left: 30vw;
+  z-index: 5;
+  width:600px;
+  background:rgba(60, 60, 60, 0.6);
+  backdrop-filter: blur(10px);
+  color:black;
+  padding:20px;
+  border: solid 1px white;
+  border-radius: 30px;
+  transition:all 1s;
+  -webkit-transition:all 1s;
+}
+
+#popup02:target
+{display: block;}
+
+#popup03
+{
+	display: none;
+  position:fixed;
+  top:25vh;
+  left: 30vw;
+  z-index: 5;
+  width:600px;
+  background:rgba(60, 60, 60, 0.6);
+  backdrop-filter: blur(10px);
+  color:black;
+  padding:20px;
+  border: solid 1px white;
+  border-radius: 30px;
+  transition:all 1s;
+  -webkit-transition:all 1s;
+}
+
+#popup03:target
+{
+display: block;}
+
+#popup04
+{
+	display: none;
+  position:fixed;
+  top:25vh;
+  left: 30vw;
+  z-index: 5;
+  width:600px;
+  background:rgba(60, 60, 60, 0.6);
+  backdrop-filter: blur(10px);
+  color:black;
+  padding:20px;
+  border: solid 1px white;
+  border-radius: 30px;
+  transition:all 1s;
+  -webkit-transition:all 1s;
+}
+
+#popup04:target
+{
+display: block;}
+
+#popup05
+{
+	display: none;
+  position:fixed;
+  top:25vh;
+  left: 30vw;
+  z-index: 5;
+  width:600px;
+  background:rgba(60, 60, 60, 0.6);
+  backdrop-filter: blur(10px);
+  color:black;
+  padding:20px;
+  border: solid 1px white;
+  border-radius: 30px;
+  transition:all 1s;
+  -webkit-transition:all 1s;
+}
+
+#popup05:target
+{
+display: block;}
+
+#popup06
+{
+	display: none;
+  position:fixed;
+  top:25vh;
+  left: 30vw;
+  z-index: 5;
+  width:600px;
+  background:rgba(60, 60, 60, 0.6);
+  backdrop-filter: blur(10px);
+  color:black;
+  padding:20px;
+  border: solid 1px white;
+  border-radius: 30px;
+  transition:all 1s;
+  -webkit-transition:all 1s;
+}
+
+#popup06:target
+{
+display: block;}
+
+#popup07
+{
+	display: none;
+  position:fixed;
+  top:25vh;
+  left: 30vw;
+  z-index: 5;
+  width:600px;
+  background:rgba(60, 60, 60, 0.6);
+  backdrop-filter: blur(10px);
+  color:black;
+  padding:20px;
+  border: solid 1px white;
+  border-radius: 30px;
+  transition:all 1s;
+  -webkit-transition:all 1s;
+}
+
+#popup07:target
+{
+display: block;}
+
+#close
+{position:absolute; right:20px; top:10px; font-size:3rem; padding:10px;color:white; text-decoration:none;
+}
+
+#close:hover
+{color:#FFDD00;}
+
+
+
+
+svg.line{width: 360px; height: 100px; position:relative;}
+
+
+	</style>
+</head>
+<body>
+	<div class="nav">
+		<div class='wrapper flex01'>
+			<ul class=' menu flex01'>
+				<li><a href='#intro'>INTRO</a></li>
+				<li><a href='#history'>HISTORY</a></li>
+				<li><a href='#term'>TERM</a></li>
+				<li><a href='#crew'>CREW</a></li>
+			</ul>
+		</div>
+	</div>
+	<section class="title">
+		<video muted autoplay loop id="vv">
+			<source src="video/videotitle.mp4" type="video/mp4">
+		</video>
+		<div class="videotext">
+			<p>WHAT YOU KNOW<br>ABOUT THE</p>
+			<img src="image/title.png" style="width:90%; position: relative; right:-60px; top: -20px;">
+		</div>
+	</section>
+	<section style="height: 1800px;">
+		<img class="introbg" src="image/introbg.png">
+	<div class="wrap flex02">
+		<h1 class="wow initial leftreveal">
+		<span class="emph">K</span>INGDOM<br>
+		<span class="emph">R</span>ADICALLY<br>
+		<span class="emph">U</span>PLIFTED<br>
+		<span class="emph">M</span>IGHTY<br>
+		<span class="emph">P</span>RAISED</h1>
+		<div class="wow rightreveal" style="margin-top: 50px;">
+			<a id="intro">
+			<h2 class="titlekr" style="top: 20%; margin-bottom: 30px;">크럼프란?</h2>
+			<p>악명 높은 범죄 발생률과 불안정한 정세를 자랑하던 로스앤젤레스 사우스 센트럴의<br>흑인 갱들이 더 이상 범죄를 저지르지 않고 살아남기 위한 수단으로 만들어진 춤.</p>
+			<p>에너지와 감정을 표현하는 춤이므로 전신을 크게 쓰는 공격적인 움직임이 눈에 띄지만<br>최근엔 공격적이라는 단편적인 이미지에서 벗어나 감정과 마음의 외침을 담아 춤추는<br>표현적이고 자유로운 댄스 장르로 확립되어 <span class="emph" style="text-decoration: underline;">나 자신을 표현하는 스타일</span>로 인식된다.</p>
+			<p>파워/에너지/창조력/발상/캐릭터 등 자신의 생활방식이나 가치관을 마음껏<br>표출해서 보는 사람들로 하여금 매료시키는 것이 KRUMP라는 장르이다.</p>
+			</a>
+		</div>
+	</div>
+	<div class="wrap flex03">
+		<div>
+			<iframe class="introvideo" src="https://www.youtube.com/embed/MQiP8pGbu5o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			<h2 class="emph titleeng">BATTLE</h2>
+			<p style="margin:0;">이름에서 알 수 있다시피 피튀기는 총격전 대신 각자의 댄스 무브를 뽐내<br>승패를 가리는 자리. 다른 댄스 장르의 배틀에 비해 두드러지는 특징으로<br>상대방의 몸에 터치를 하는 <span class="emph">Beef</span> 문화를 들 수 있다.</p>
+		</div>
+		<div style="margin-left: 10px;">
+			<iframe class="introvideo" src="https://www.youtube.com/embed/VqBSUb5h14c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+			<h2 class="emph titleeng">SESSION</h2>
+			<p style="margin:0;">여러 명의 댄서가 모여 각자의 춤을 보여주는 자리. 다른 댄스 장르에선<br>잼이라고도 한다. 관중들이 큰 목소리로 응원이나 리액션을 보내면서<br>댄서와 에너지를 주고받는데, 이것을 <span class="emph">Hype</span>라고 한다.</p>
+		</div>
+	</div>
+	</section>
+<section class="bgimg01">
+	<a id="history">
+		<div class="wrap" style="text-align: center; padding: 120px 0px;">
+		<h2 class="titlekr">크럼프의 시작, 클라우닝</h2>
+		<p>50년도 채 되지 않아 비교적 짧은 크럼프의 역사는 다름아닌 한 광대로부터 시작되었다.</p>
+		<img src="image/tommy.png" style="width: 40%;">
+		<div class="wow topreveal" style="position: relative; top: -60px;">
+			<h2 class="titleeng" style="font-size: 5rem;">TOMMY THE CLOWN</h2>
+			<p>1990년대 초 로스엔젤레스 사우스 센트럴에는 마약, 빈곤, 폭력, 범죄가 셀 수 없이 발생하고 있었다.<br>그러던 와중 마약 딜러였던 토미 더 클라운(TOMMY THE CLOWN)이 가혹한 환경에서 힘겹게 살아가는 아이들을<br>기쁘게 하기 위해 광대 분장을 하고 클라운 댄스(Clown Dance)를 선보였다. 이 클라운 댄스가 큰 인기를 끌며<br>아이들은 물론 성인들도 이 춤을 따라 추기 시작했다.</p>
+		</div>
+	</div>
+	</a>
+	<div class="flex02" style="text-align: left;">
+		<img src="image/his01.png">
+		<div style=" margin-left:100px; padding: 130px 0;">
+			<h2 class="titlekr wow rightreveal">위험하고 거친<br>범죄의 삶 대신</h2>
+		</div>
+	</div>
+	<div class="flex03" style="text-align: right;">
+		<div style=" margin-right:100px; padding: 130px 0;">
+			<h2 class="titlekr wow leftreveal">'춤을 춘다'라는<br>새로운 선택지로.</h2>
+		</div>
+		<img src="image/his02.png">
+	</div>
+</section>
+<section style=" text-align: center; height:1400px;">
+	<div class="verticalline" style="position: relative; top:180px;">
+	</div>
+	<div class="flex04">
+		<div class="wow rightreveal" style="text-align: left;">
+			<img src="image/eyez.png" style="width:90%;">
+			<div style="margin-left: 200px;
+			position: relative; top: -80px;">
+				<h2 class="emph titleeng">
+					CREATOR OF KRUMP
+				</h2>
+				<h2 class="titleeng" style="font-size: 5rem; margin-top:0;">TIGHT EYEZ</h2>
+			</div>
+		</div>
+		<div class="wow leftreveal" style="text-align: right;">
+			<img src="image/mijo.png" style="width:90%;">
+			<div style="margin-right: 200px;
+			position: relative; top:-80px;">
+				<h2 class="emph titleeng">
+					CREATOR OF KRUMP
+				</h2>
+				<h2 class="titleeng" style="font-size: 5rem; margin-top: 0;">BIG MIJO</h2>
+			</div>
+		</div>
+	</div>
+	<div class="wow topreveal" style="position: relative; top: -60px;">
+			<h2 class="titlekr">즐겁기 위한 춤에서<br>싸우기 위한 춤까지</h2>
+			<p>그에 이어 토미의 제자였던 Tight Eyez와 Big Mijo를 필두로 Lil C나 Miss Prissy, Crush와 같은<br>젊은 댄서들이 모여 즐겁기 위한 춤인 클라우닝을 싸우기 위한 춤 KRUMP로 발전시켰다.<br>어려운 환경에서 살아남기 위해 '싸우는 춤'은 생존 수단이었으며, 현실에 대한 분노와 갈등이 이 춤을 탄생시켰다.</p>
+		</div>
+</section>
+<section style="height: 1500px;">
+	<div class="verticalline"></div>
+	<div class="topreveal" style="margin-top: 120px; text-align: center;">
+			<h2 class="emph titleeng">OG KRUMPERS</h2>
+			<p>크럼프에서의 OG라는 용어는 Tight Eyez와 Big Mijo와 함께 크럼프의 완성에 기여한 말 그대로의 '원조' 댄서들을 말한다.<br>이 문단에서는 실질적 의미의 OG 댄서들과 활발한 활약으로 크럼프씬의 정상에 올라 있는 챔피언들을 소개한다.</p>
+		</div>
+	<div class="wrap flex05" style="padding: 0;">
+		<div class="ogdiv wow fadein01" style="background: url(image/crush.png)">
+			<a href="https://www.instagram.com/theprinceofkrump/"
+			target="_blank" rel="noopener noreferrer"
+			style="height:0;">
+				<div class="overlay">
+					<p>@theprinceofkrump</p>
+				</div>
+				<h2 class="emph titleeng ogname">CRUSH</h2>
+			</a>
+		</div>
+		<div class="ogdiv wow fadein02" style="background: url(image/konkrete.png)">
+			<a href="https://www.instagram.com/konkrete_/"
+			target="_blank" rel="noopener noreferrer"
+			style="height:0;">
+				<div class="overlay">
+					<p>@konkrete_</p>
+				</div>
+				<h2 class="emph titleeng ogname">KONKRETE</h2>
+			</a>
+		</div>
+		<div class="ogdiv wow fadein03" style="background: url(image/ruin.png)">
+			<a href="https://www.instagram.com/lastofthagreats/"
+			target="_blank" rel="noopener noreferrer"
+			style="height:0;">
+				<div class="overlay">
+					<p>@lastofthagreats</p>
+				</div>
+				<h2 class="emph titleeng ogname">RUIN</h2>
+			</a>
+		</div>
+		<div class="ogdiv wow fadein01" style="background: url(image/beast.png)">
+			<a href="https://www.instagram.com/beast.salonga/"
+			target="_blank" rel="noopener noreferrer"
+			style="height:0;">
+				<div class="overlay">
+					<p>@beast.salonga</p>
+				</div>
+				<h2 class="emph titleeng ogname">BEAST</h2>
+			</a>
+		</div>
+		<div class="ogdiv wow fadein02" style="background: url(image/solow.png)">
+			<a href="https://www.instagram.com/youdiditsolow/"
+			target="_blank" rel="noopener noreferrer"
+			style="height:0;">
+				<div class="overlay">
+					<p>@youdiditsolow</p>
+				</div>
+				<h2 class="emph titleeng ogname">SOLOW</h2>
+			</a>
+		</div>
+		<div class="ogdiv wow fadein03" style="background: url(image/slam.png)">
+			<a href="https://www.instagram.com/slam_madrootz/"
+			target="_blank" rel="noopener noreferrer"
+			style="height:0;">
+				<div class="overlay">
+					<p>@slam_madrootz</p>
+				</div>
+				<h2 class="emph titleeng ogname">SLAM</h2>
+			</a>
+		</div>
+		<div class="ogdiv wow fadein01" style="background: url(image/ryat.png)">
+			<a href="https://www.instagram.com/therealbigryat/"
+			target="_blank" rel="noopener noreferrer"
+			style="height:0;">
+				<div class="overlay">
+					<p>@therealbigryat</p>
+				</div>
+				<h2 class="emph titleeng ogname">RYAT</h2>
+			</a>
+		</div>
+		<div class="ogdiv wow fadein02" style="background: url(image/rapture.png)">
+			<a href="https://www.instagram.com/god_rapture/"
+			target="_blank" rel="noopener noreferrer"
+			style="height:0;">
+				<div class="overlay">
+					<p>@god_rapture</p>
+				</div>
+				<h2 class="emph titleeng ogname">RAPTURE</h2>
+			</a>
+		</div>
+		<div class="ogdiv wow fadein03" style="background: url(image/daisy.png)">
+			<a href="https://www.instagram.com/thedaize/"
+			target="_blank" rel="noopener noreferrer"
+			style="height:0;">
+				<div class="overlay">
+					<p>@thedaize</p>
+				</div>
+				<h2 class="emph titleeng ogname">DAISY</h2>
+			</a>
+		</div>
+	</div>
+</section>
+<section style="height: 700px;">
+	<a id="term">
+	<div id="howtobg" class="wrap" style="padding: 160px 0px;">
+		<div style="position:relative; left: 100px;">
+			<h2 class="titlekr">어떻게 추는 춤인가?</h2>
+			<p>에너지가 담긴 동작을 활용하여 자신에 대한 이야기를 나누는 게 크럼프이다.<br>크럼프를 이루는 요소와 용어는 수도 없이 많지만 크럼프 무브를 설명하기 위해<br>크게 2가지 영역을 나눌 수 있다. 동작적 요소와 스토리텔링 요소이다.</p>
+			<div class="flex02 wow leftreveal" style="margin-top:30px;">
+				<div class="circle">
+					<h2 class="emph titleeng" style="position:relative; top:20px;">
+					ENERGETIC<br>MOVEMENT
+					</h2>
+				</div>
+				<div class="circle">
+					<h2 class="emph titleeng" style="position:relative; top:20px;">
+						STORY<br>TELLING
+					</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+	</a>
+</section>
+<section class="bgimg" style="height:1200px;">
+	<div class="wrap wow topreveal"
+	style="position: relative; top: -60px; text-align: center; padding: 150px 0px 20px 0px;">
+		<h2 class="titlekr">크럼프 동작의 종류</h2>
+		<p>동작적인 면에서 본다면 신체 부위별로 크럼프의 에너지를 표현할 수 있는 명확한 기본 요소들이 존재한다.</p>
+	</div>
+	<div class="wrap movement" style="padding:0; height:800px;">
+		<a id="closed">
+
+		<div id="popup01" style="text-align:center;">
+		  <a id="close" href="#closed">X</a>
+		  <img src="image/focus.gif">
+		  <h2 class="titleeng">FOCUS POINT</h2>
+		<p>시선처리와 고개 역시 내가 말하고자 하는 걸 표현할 때 가장<br>좋은 방법이다. 손가락이나 스텝 등 내가 중점적으로 보여주고<br>싶은 부위에 시선을 꽂아주면 더 큰 효과를 볼 수 있다.</p>
+		</div>
+
+		<div id="popup02" style="text-align:center;">
+		  <a id="close" href="#closed">X</a>
+		  <img src="image/chestpop.gif">
+		  <h2 class="titleeng">CHEST POP</h2>
+		<p>이름 그대로 가슴을 튕기는 듯한 동작이다. 명치에 순간적으로 힘을<br>줘서 마치 가슴이 들어올려지는 느낌을 줘야 한다. 기본 체스트팝 /<br>빅 체스트팝 / 힛 / 뱅 / 브리딩 등 여러 종류의 체스트팝이 있다.</p>
+		</div>
+
+		<div id="popup03" style="text-align:center;">
+		  <a id="close" href="#closed">X</a>
+		  <img src="image/language.gif">
+		  <h2 class="titleeng">LANGUAGE</h2>
+		<p>손 모양으로 표현할 수 있는 3가지 랭귀지가 있다. 가위바위보의 형태를<br>띠고 있는데, 주먹의 경우 파워 / 가위는 스타일, 포인트 / 보는 스페이스라고<br>한다. 표현하려는 이미지에 따라 랭귀지를 적재적소에 사용할 수 있다.</p>
+		</div>
+
+		<div id="popup04" style="text-align:center;">
+		  <a id="close" href="#closed">X</a>
+		  <img src="image/stomp.gif">
+		  <h2 class="titleeng">STOMP</h2>
+		<p>에너지를 표현하기 위하여 발을 구르는 동작. 발바닥 중앙으로<br>밟아서 다리에 무리가 가지 않도록 해야 한다. 몸 전체를 사용하는<br>스쿱이나 여러 방향의 스텀프 등 다양한 응용동작이 존재한다.</p>
+		</div>
+
+		<div id="popup05" style="text-align:center;">
+		  <a id="close" href="#closed">X</a>
+		  <img src="image/armplace.gif">
+		  <h2 class="titleeng">ARM PLACEMENT</h2>
+		<p>어깨나 팔꿈치의 각도에 따라 다양한 포즈 혹은 무브먼트를<br>만들어낼 수 있다. 이 포즈를 모두 통틀어 암플레이스먼트라<br>하고, 여기에는 랭귀지 요소도 포함된다.</p>
+		</div>
+
+		<div id="popup06" style="text-align:center;">
+		  <a id="close" href="#closed">X</a>
+		  <img src="image/jabswing.gif">
+		  <h2 class="titleeng">JAB / ARM SWING</h2>
+		<p>잽은 복싱에서 생각하는 잽과 비슷하다. 팔에 힘을 실어 빠르게 타점을 치고<br>돌아오는 동작이다. 암스윙은 야구공을 던지듯이 팔을 휘둘러서 타점을 친다.<br>암플레이스먼트에서 직선적 움직임은 잽, 곡선적 움직임은 암스윙으로 분류한다.</p>
+		</div>
+
+		<div id="popup07" style="text-align:center;">
+		  <a id="close" href="#closed">X</a>
+		  <img src="image/traveling.gif">
+		  <h2 class="titleeng">TRAVELING</h2>
+		<p>말그대로 여행, 즉 자리를 옮긴다는 의미. 트래블링을 적극적으로<br>활용하면 극적인 빌드업을 이끌어낼 수 있다.
+		</div>
+		
+
+	<div class="flex01" style="gap: 400px;">
+
+		<div style="display:flex; flex-wrap: wrap;
+		align-content: space-around; width:200px; height: 700px;">
+
+			<a id="button" href="#popup01">
+				<h2 class="emph titleeng" style="margin:0;">EYE</h2></a>
+
+			<a id="button" href="#popup02">
+				<h2 class="emph titleeng" style="margin:0;">
+				CHEST</h2></a>
+
+			<a id="button" href="#popup03">
+				<h2 class="emph titleeng" style="margin:0;">HAND</h2></a>
+
+			<a id="button" href="#popup04">
+				<h2 class="emph titleeng" style="margin:0;">
+				FOOT</h2></a>
+		</div>
+
+		<div style="display:flex; flex-wrap: wrap;
+		align-content: space-around; width:200px; height: 700px;">
+
+			<a id="button" href="#popup05">
+				<h2 class="emph titleeng" style="margin:0;">
+				SHOULDER</h2></a>
+
+			<a id="button" href="#popup06">
+				<h2 class="emph titleeng" style="margin:0;">ARM</h2></a>
+
+			<a id="button" href="#popup07">
+				<h2 class="emph titleeng" style="margin:0;">LEG</h2></a>
+
+		</div>
+	</div>
+
+		<svg class="line" style="top:-610px; left: 281px;">
+			<line x1='0' y1='0' x2='360' y2='80' style="stroke:white;stroke-width:1">
+		</svg>
+		<svg class="line" style="top:-440px; left: -82px;">
+			<line x1='0' y1='0' x2='280' y2='40' style="stroke:white;stroke-width:1">
+		</svg>
+		<svg class="line" style="top:-260px; left: -444px;">
+			<line x1='0' y1='0' x2='240' y2='60' style="stroke:white;stroke-width:1">
+		</svg>
+		<svg class="line" style="top:-190px; left: 281px;">
+			<line x1='0' y1='0' x2='200' y2='80' style="stroke:white;stroke-width:1">
+		</svg>
+		<svg class="line" style="top:-686px; right: -178px;">
+			<line x1='200' y1='100' x2='360' y2='0' style="stroke:white;stroke-width:1">
+		</svg>
+		<svg class="line" style="top:-450px; right: 185px;">
+			<line x1='140' y1='60' x2='360' y2='0' style="stroke:white;stroke-width:1">
+		</svg>
+		<svg class="line" style="top:-322px; left: 540px;">
+			<line x1='156' y1='0' x2='360' y2='0' style="stroke:white;stroke-width:1">
+		</svg>
+
+	</a>
+	</div>
+</section>
+<section class="bgimg" style="height: 2200px;">
+	<div class="wrap wow topreveal"
+	style="position: relative; top: -60px; text-align: center; padding: 150px 0px 20px 0px;">
+		<h2 class="titlekr">크럼프로 스토리텔링하기</h2>
+		<p>크럼프를 통해 내가 이야기하려는 감정이나 상태를 보다 설득력 있고 강렬하게 전달하기 위해<br>보통 아래와 같은 정석적인 빌드업 방식을 알아두는 것이 좋다.</p>
+	</div>
+	<div class="wrap buildup" style="padding:0; height: 640px; text-align:center;">
+		<div style="position:relative; top: -30px; left:100px;
+		display: flex; gap: 20px;">
+			<h2 class="storytell">BUILD UP</h2>
+			<p style="position: relative; top:30px;">나의 캐릭터가 지닌 감정, 생각 등을 '이야기'로 풀어낼 때 필요한 기승전결의 전개 방식.</p>
+		</div>
+		<h2 style="letter-spacing: -0.1rem; font-size: 3rem;">
+		&ldquo;Today was a sucess.&rdquo;</h2>
+		<div class="graph">
+			<div class="flex04" style="position: relative; top: 160px;">
+				<div style="text-align:center;">
+					<h2 class="storytell" style="font-size: 3rem;">BUCK</h2>
+					<h2 style="letter-spacing: -0.1rem; line-height:2.2rem;">There's a girl<br>I do like.</h2>
+					<p>춤에서의 발단, 즉 '기'에 해당하는 부분.<br>이성을 앞세워 이야기를 설명하는 단계.</p>
+				</div>
+				<div style="text-align:center;">
+					<h2 class="storytell" style="font-size: 3rem;">KRUMP</h2>
+					<h2 style="letter-spacing: -0.1rem; line-height:2.2rem;">I confessed to her<br>that I love you.</h2>
+					<p>발단에 이은 전개, 즉 '승'에 해당하는 부분.<br>이성과 감정의 조화로 이야기하는 단계.</p>
+				</div>
+				<div style="text-align:center;">
+					<h2 class="storytell" style="font-size: 3rem;">LIVENESS</h2>
+					<h2 style="letter-spacing: -0.1rem; line-height:2.2rem;">Finally, she accepted<br>my confession!!</h2>
+					<p>절정이자 클라이막스, '전'에 해당.<br>감정의 표출로 호소력을 얻는 단계.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="wrap flex02" style="padding:0;">
+		<img src="image/dancer.png" style="position:relative; top:-80px;">
+		<div class="wow leftreveal" style="position:relative; top:200px;">
+			<h2 class="storytell">CHARACTER</h2>
+			<p style="margin:0;">'나 자신'을 나타내는 하나의 이미지. 창시자 중 한 명인 Tight Eyez의 경우<br>NY / BAD GUY / Styleripper 등 다양한 캐릭터를 지니고 있다.</p>
+		</div>
+	</div>
+	<div class="wrap" style="padding:0; text-align: center; position: relative; top:-260px;">
+		<img class="bounce" src="image/crowd.png" style="width:1200px; height:500px;">
+		<div class="crowdtext" style="margin:auto;">
+			<h2 style="letter-spacing: -0.1rem; font-size: 3rem;">
+			&ldquo;That's DOPE!!&rdquo;
+			</h2>
+		</div>
+		<div style="position:relative; top: -80px;
+		display: flex; justify-content: center; gap: 40px;">
+			<h2 class="storytell">HYPE</h2>
+			<p style="text-align: left;">사람들이 큰 소리로 호응해주며 에너지를 주고받는 행위.<br>Hype로 받은 에너지를 다시 크럼프로 받아칠 수 있다.</p>
+		</div>
+	</div>
+
+</section>
+<section style="height:1600px;">
+	<a id="crew">
+	<div class="wrap">
+		<div class="flex06 wow rightreveal" style="margin-bottom: 90px;">
+			<h2 class="titlekr">국내 크럼프 크루</h2>
+			<p style="margin:0 0 0 50px;">Mnet에서 제작한 댄서들의 서바이벌 프로그램 '스트릿 맨 파이터'를 통해 '프라임킹즈'라는 팀이 현재<br>대중적으로 잘 알려져있지만 실제로는 더 많은 크럼프 팀이 아직도 한국에서 활발하게 활동하고 있다.</p>
+		</div>
+		<div class="wrap flex06" style="padding:0; margin-bottom:40px;">
+			<div style="margin:10px;">
+				<img src="image/primekingzcrew.png">
+				<h2 class="emph titleeng">PRIMEKINGZ CREW</h2>
+				<p>TRIX / KNUCKS / DOOR / KYOYOUNG.JR / COUNTER / 2FACE / ASK<br>GROOVY / ROAR / HELLA / CRUGER / RAIDER / ILLEVEN / DIN-O<br>STOMPER / RAWBOT / RAWMAN / V / X-FACTOR</p>
+			</div>
+			<div style="margin:10px;">
+				<img src="image/teamblackout.png">
+				<h2 class="emph titleeng">TEAM BLACKOUT</h2>
+				<p>MANIACC / KARIN / KRUMPPY / DRACOPAK / SPARK / RIMSHOT<br>PAUST / A1 / TED / MUUK / CHɵNG</p>
+			</div>
+		</div>
+		<div class="wrap flex06" style="padding:0;">
+			<div style="margin:10px;">
+				<img src="image/botb.png">
+				<h2 class="emph titleeng">BOTB</h2>
+				<p>AXKIM / BLACKBOMB / OPERA / UNUSUAL / ZOOXXI<br>TRI_ANGLE / CHERRY_PEPPER</p>
+			</div>
+			<div style="margin:10px;">
+				<img src="image/primequeenz.png">
+				<h2 class="emph titleeng">PRIMEQUEENZ</h2>
+				<p>GROOVY / HELLA / ROAR / M.NINE / CURVY</p>
+			</div>
+		</div>
+	</div>
+	</a>
+</section>
+<footer>
+	<p style="color: #ffdd00; margin: 0; position:relative; top:100px;">
+		© SebinLim. 2023. 크럼프, 정말 재밌고 멋있습니다!
+	</p>
+</footer>
+
+<script src="wow.js"></script>
+<script>new WOW().init();</script>
+
+
+</body>
+</html>
